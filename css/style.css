@@ -80,29 +80,29 @@ body::after {
 
 .card {
   width: 96%;
-  max-width: 327px;
+  max-width: 20.5rem;
   text-align: center;
   background-color: white;
-  border-radius: 16px;
-  box-shadow: 0 0 25px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  box-shadow: 0 0 1.625 1rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 @media (min-width: 540px) {
   .card {
-    max-width: 350px;
+    max-width: 21.875rem;
   }
 }
 .card__top {
-  background: url("../images/bg-pattern-card.svg") no-repeat 0 0/100% 140px;
-  padding-top: 86px;
+  background: url("../images/bg-pattern-card.svg") no-repeat 0 0/100% 8.75rem;
+  padding-top: 5.375rem;
 }
 .card__body {
-  padding: 20px 20px 24px;
+  padding: 1.25rem 1.25rem 1.5rem;
 }
 .card__footer {
   border-top: 1px solid hsla(0deg, 0%, 59%, 0.25);
-  padding: 24px;
+  padding: 1.5rem;
 }
 
 .profile-image {
@@ -116,13 +116,13 @@ body::after {
 }
 .profile-info__name {
   display: inline;
-  margin: 0 4px 0 0;
+  margin: 0 0.25rem 0 0;
   font-size: inherit;
   color: hsl(229deg, 23%, 23%);
 }
 .profile-info__place {
-  font-size: 14px;
-  margin-top: 10px;
+  font-size: 0.875rem;
+  margin-top: 0.625rem;
 }
 .profile-stat {
   display: flex;
@@ -135,7 +135,7 @@ body::after {
   color: hsl(229deg, 23%, 23%);
 }
 .profile-stat__key {
-  font-size: 11px;
+  font-size: 0.6875rem;
   letter-spacing: 0.1em;
-  margin-top: 4px;
+  margin-top: 0.25rem;
 }/*# sourceMappingURL=style.css.map */
