@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+$font-base: "Kumbh Sans", sans-serif;
+$width-tablet: 540px;
+$color-dark-cyan: hsl(185, 75%, 39%);
+$color-very-dark-desaturated-blue: hsl(229, 23%, 23%);
+$color-dark-grayish-blue: hsl(227, 10%, 46%);
+$color-dark-gray: hsl(0, 0%, 59%);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  background: $color-dark-cyan;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: $font-base;
+  font-weight: 400;
+  line-height: 1.2;
+  color: $color-dark-grayish-blue;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 63vw;
+    height: 50vh;
+    background: url("../images/bg-pattern-top.svg") right bottom no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @media (min-width: $width-tablet) {
+      width: 48vw;
+      height: 65vh;
+    }
+  }
+
+  &::after {
+    content: "";
+    width: 64vw;
+    height: 61vh;
+    background: url("../images/bg-pattern-bottom.svg") left top no-repeat;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    @media (min-width: $width-tablet) {
+      width: 48vw;
+      height: 65vh;
+    }
+  }
+}
+
+.container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.attribution {
+  padding-bottom: 1rem;
+  font-size: 0.6875rem;
+  text-align: center;
+  color: $color-very-dark-desaturated-blue;
+  position: relative;
+  z-index: 1;
+
+  a {
+    color: inherit;
+  }
+}
+
+.img-fluid {
+  display: block;
+  max-width: 100%;
+}
+
+.card {
+  width: 96%;
+  max-width: 327px;
+  text-align: center;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 0 25px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-size: 18px;
+
+  @media (min-width: $width-tablet) {
+    max-width: 350px;
+  }
+
+  &__top {
+    background: url("../images/bg-pattern-card.svg") no-repeat 0 0 / 100% 140px;
+    padding-top: 86px;
+  }
+
+  &__body {
+    padding: 20px 20px 24px;
+  }
+
+  &__footer {
+    border-top: 1px solid hsla(0, 0%, 59%, 0.25);
+    padding: 24px;
+  }
+}
+
+.profile {
+  &-image {
+    width: fit-content;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &-info {
+    &__name {
+      display: inline;
+      margin: 0 4px 0 0;
+      font-size: inherit;
+      color: $color-very-dark-desaturated-blue;
+    }
+
+    &__place {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  }
+
+  &-stat {
+    display: flex;
+
+    &__item {
+      flex: 1 0 0%;
+    }
+
+    &__value {
+      font-weight: 700;
+      color: $color-very-dark-desaturated-blue;
+    }
+
+    &__key {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      margin-top: 4px;
+    }
+  }
+}
